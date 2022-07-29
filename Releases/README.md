@@ -1,0 +1,20 @@
+# Executables CHECKSUMS
+---
+### v1
+
+```
+[MD5-CHECKSUM]
+
+numberGuessingGame :  221b618b340ee315a71de40d538c7c9c
+numberGuessingGame.exe :  e7d9e9e5f899ec351f8e00884f44c727
+
+[SHA256-CHECKSHUM]
+
+numberGuessingGame :  de21514a7a1a9c0c26f6ebbac287efa3a7641e2e5df4ed45b1662596ec9f51fb
+numberGuessingGame.exe :  73f6462d8b94c25b57ff87ee45152a5c10abbd89c0197e4a79bf8b70dd8274ec
+
+[SHA512-CHECKSUM]
+
+numberGuessingGame : 98d3998441acb10834083b9a391fbd6e4a32cab2e23e5d89df3c19456cded4d0813d276cd8775fbc4a75ad83d3e9a43809ac9bf4c35ff84ef290523ac37e03f0
+numberGuessingGame.exe : a8ecfe811a098f2cb10a144e2692538c0a6f97e5da1f5856fb64b712d2782e0ef341c42557a11c03e17093998732ca51522db632002023c0b28d7e3268e2bf59
+```
