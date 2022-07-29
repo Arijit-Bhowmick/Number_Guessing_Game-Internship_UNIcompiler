@@ -76,8 +76,8 @@ class NumberGuessing:
         Function For Guess algorithm
         '''
 
-        # self.guessed_number = int(input("Guess the Number\n==> "))
-        self.guessed_number = int(input(f'''
+        try:
+            self.guessed_number = int(input(f'''
 {"-"*50}\nLevel {self.current_level}\n{"-"*50}
 
 Hint Count : {self.hint_used_per_level}
@@ -94,19 +94,19 @@ Checked Numbers : {str(self.guessed_numbers)[1:-1]}
 
 Guess the Number\n==> '''))
 
-        self.clearScreen()
+            self.clearScreen()
 
-        if self.guessed_number not in self.guessed_numbers:
-            self.guessed_numbers.append(self.guessed_number)
+            if self.guessed_number not in self.guessed_numbers:
+                self.guessed_numbers.append(self.guessed_number)
 
 
-        # Checks For guesses
+            # Checks For guesses
 
-        if self.guessed_number==self.random_number:
-            self.score+=self.current_level
-            self.current_level+=1
+            if self.guessed_number==self.random_number:
+                self.score+=self.current_level
+                self.current_level+=1
 
-            input(f"""
+                input(f"""
 {"-"*50}\n!!! Congratulations, You Got it !!!\n{"-"*50}
 
 {"-"*50}
@@ -121,15 +121,18 @@ Moving to Level {self.current_level} ... :)
 --- PRESS ENTER TO CONTINUE ---
 !!! PRESS CTRL^C TO EXIT !!!
 """)
-            self.levelSetup()
+                self.levelSetup()
 
-        else:
-            print("): INCORRECT GUESS :(")
-            if self.score==0:
-                pass
             else:
-                self.score-=1
-            self.hint()
+                print("): INCORRECT GUESS :(")
+                if self.score==0:
+                    pass
+                else:
+                    self.score-=1
+                self.hint()
+        except ValueError:
+            self.clearScreen()
+            pass
 
     def hint(self):
         '''
