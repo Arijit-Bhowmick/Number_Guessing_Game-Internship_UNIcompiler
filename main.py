@@ -1,5 +1,15 @@
 #!/bin/bash
 
+"""
+Number Guessing Game [CLI]
+Created By Arijit Bhowmick [sys41x4]
+
+[
+    Created For : Internship Project,
+    Internship Provider : UNIcompiler
+]
+"""
+
 from os import system
 import sys
 import random
@@ -24,7 +34,7 @@ class NumberGuessing:
         self.max_random_final = max_random_final
         self.current_level = 1
         self.platform = sys.platform
-        
+        self.banner = 'Number Guessing Game [By Arijit Bhowmick [sys41x4]]'
     def clearScreen(self):
         '''
         Clear Screen for next input
@@ -59,7 +69,9 @@ class NumberGuessing:
 
         # random_number => to be used for number guessing
         self.random_number = self.randomNumber(random_initial, random_final)
-        print(self.random_number)
+
+        # print(self.random_number) # For Testing Purposes
+
         # Hints Setup
         self.all_hints = ''
 
@@ -78,6 +90,8 @@ class NumberGuessing:
 
         try:
             self.guessed_number = int(input(f'''
+{"-"*50}\n{self.banner}\n{"-"*50}
+
 {"-"*50}\nLevel {self.current_level}\n{"-"*50}
 
 Hint Count : {self.hint_used_per_level}
